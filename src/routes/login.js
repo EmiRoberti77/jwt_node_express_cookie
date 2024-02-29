@@ -28,6 +28,6 @@ module.exports = (app) => {
       httpOnly: true,
     });
 
-    return res.redirect('/welcome.html');
+    return res.redirect('/welcome');
   });
 };
