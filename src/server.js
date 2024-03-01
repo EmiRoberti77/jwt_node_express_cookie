@@ -2,6 +2,7 @@ const express = require('express');
 const cookieParser = require('cookie-parser');
 const path = require('path');
 const loginRoute = require('./routes/login');
+const addRoute = require('./routes/add');
 const port = 8000;
 const app = express();
 
@@ -14,6 +15,7 @@ app.use(
 app.use(cookieParser());
 
 loginRoute(app);
+addRoute(app);
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../public/index.html'));
